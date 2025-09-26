@@ -24,11 +24,28 @@ const Hero = () => {
                   Without Limits
                 </span>
               </h1>
-              <p className="text-base lg:text-lg text-neutral-700 dark:text-neutral-100 ">
+              <p className="text-base lg:text-lg text-neutral-700 dark:text-neutral-100 max-w-2xl ">
                 Elevate your web projects with our streamlined design system
                 powered by the latest Tailwind CSS v4. Create stunning user
                 experiences with state-of-the-art theme switching.
               </p>
+              <div className="flex gap-3 items-center">
+                <div className="h-px w-12 bg-amber-500 dark:bg-neutral-700"></div>
+                <p className="text-xs uppercase font-medium tracking-widest text-neutral-500 dark:text-neutral-400">
+                  Transition Seamlessly
+                </p>
+              </div>
+            </div>
+            <div className="flex gap-3 lg:gap-4">
+              <button className="bg-neutral-800 dark:bg-amber-500 hover:bg-amber-500 dark:hover:bg-amber-600 text-neutral-50 dark:text-amber-50 py-2 px-4 rounded-lg shadow-md shadow-neutral-900/20 dark:shadow-amber-500/20 flex items-center gap-2">
+                {" "}
+                <i className="bx bx-code-alt mr-1"></i> Button
+              </button>
+
+              <button className="flex items-center gap-2 ml-2 border border-neutral-400 rounded-lg px-4">
+                {" "}
+                <i className="bx bx-book-open mr-1"></i> Button
+              </button>
             </div>
           </div>
         </div>

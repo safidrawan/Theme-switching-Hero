@@ -42,7 +42,11 @@ const App = () => {
         onClick={toggleDarkMode}
         title="Toggle dark mode"
       >
-        <i className={darkMode ? "bx bx-sun" : "bx bx-moon"}></i>
+        <i
+          className={`${
+            darkMode ? "bx bx-sun" : "bx bx-moon"
+          } text-neutral-950`}
+        ></i>
       </button>
       <Hero />
     </div>

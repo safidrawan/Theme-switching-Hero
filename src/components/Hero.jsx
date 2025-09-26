@@ -39,14 +39,33 @@ const Hero = () => {
             <div className="flex gap-3 lg:gap-4">
               <button className="bg-neutral-800 dark:bg-amber-500 hover:bg-amber-500 dark:hover:bg-amber-600 text-neutral-50 dark:text-amber-50 py-2 px-4 rounded-lg shadow-md shadow-neutral-900/20 dark:shadow-amber-500/20 flex items-center gap-2">
                 {" "}
-                <i className="bx bx-code-alt mr-1"></i> Button
+                <i className="bx bx-code-alt mr-1"></i> start Coding
               </button>
 
               <button className="flex items-center gap-2 ml-2 border border-neutral-400 rounded-lg px-4">
                 {" "}
-                <i className="bx bx-book-open mr-1"></i> Button
+                <i className="bx bx-book-open mr-1"></i> Documentation
               </button>
             </div>
+        <div className="flex items-center gap-3">
+              <div className="flex -space-x-3">
+              <img src="src/images/1.jpg" alt="user photo" className="w-9 h-9 lg:w-10 lg:h-10 rounded-full border border-amber-500 object-cover" />
+              <img src="src/images/2.jpg" alt="user photo" className="w-9 h-9 lg:w-10 lg:h-10 rounded-full border border-amber-500 object-cover" />
+              <img src="src/images/5.jpg" alt="user photo" className="w-9 h-9 lg:w-10 lg:h-10 rounded-full border border-amber-500 object-cover" />
+              <span className="bg-amber-500 py-1 px-2 rounded-full w-9 lg:w-10 h-9 lg:h-10 flex items-center justify-center">+5K</span>
+            </div>
+          <div>
+              <div className="space-y-1">
+              <i className="bx bxs-star text-amber-500"></i>
+              <i className="bx bxs-star text-amber-500"></i>
+              <i className="bx bxs-star text-amber-500"></i>
+              <i className="bx bxs-star text-amber-500"></i>
+              <i className="bx bxs-star-half text-amber-500"></i>
+              <span className="text-neutral-500 dark:text-neutral-400 ml-2">4.8/5.0</span>
+            </div>
+            <p className="text-sm text-neutral-500 dark:text-neutral-400">Trusted by <span className="font-semibold text-black dark:text-neutral-50">5,000+</span> developers worldwide</p>
+          </div>
+        </div>
           </div>
         </div>
       </div>

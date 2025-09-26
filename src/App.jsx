@@ -4,13 +4,24 @@ import Hero from "./components/Hero";
 import "boxicons/css/boxicons.min.css";
 
 const App = () => {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(()=>{
+    const savedDarkMode = localStorage.getItem("savedDarkMode");
+    if (savedDarkMode === "dark") {
+      return true;
+    } else if(savedDarkMode === "light"){
+      return false;
+    } else {
+      return window.matchMedia("(prefers-color-scheme: dark)").matches;
+    }
+  });
 
   useEffect(() => {
     if (darkMode) {
       document.documentElement.classList.add("dark");
+      localStorage.setItem("savedDarkMode", "dark");
     } else {
       document.documentElement.classList.remove("dark");
+      localStorage.setItem("savedDarkMode", "light");
     }
   }, [darkMode]);
 

@@ -45,7 +45,7 @@ const Hero = ({ darkMode }) => {
                 <i className="bx bx-book-open mr-1"></i> Documentation
               </button>
             </div>
-            {/* Trust badges */}
+            {/* Trust Element */}
             <div className="flex items-center gap-3">
               <div className="flex -space-x-3">
                 <img
@@ -63,7 +63,7 @@ const Hero = ({ darkMode }) => {
                   alt="user photo"
                   className="w-9 h-9 lg:w-10 lg:h-10 rounded-full border border-amber-500 object-cover"
                 />
-                <span className="bg-amber-500 py-1 px-2 rounded-full w-9 lg:w-10 h-9 lg:h-10 flex items-center justify-center">
+                <span className="bg-amber-500 py-1 px-2 rounded-full w-9 lg:w-10 h-9 lg:h-10 flex items-center justify-center text-neutral-900">
                   +5K
                 </span>
               </div>
@@ -90,20 +90,53 @@ const Hero = ({ darkMode }) => {
           </div>
 
           {/* Right side code snippet */}
-          <div className="bg-white dark:bg-neutral-900 flex-1 border border-neutral-200 dark:border-neutral-700 p-4 lg:p-5 xl:p-6 rounded-2xl w-full shadow-2xl shadow-amber-500/20">
-            {/* Dotes as windows control */}
-            <div className="flex items-center gap-2 relative">
-              <span className="w-2.5 h-2.5 lg:w-3 lg:h-3 bg-red-500 rounded-full"></span>
-              <span className="w-2.5 h-2.5 lg:w-3 lg:h-3 bg-green-500 rounded-full"></span>
-              <span className="w-2.5 h-2.5 lg:w-3 lg:h-3 bg-yellow-500 rounded-full"></span>
-              <span className="text-xs text-neutral-500 dark:text-neutral-400 absolute right-0 top-1/2 -translate-y-1/2">
-                DarkMode.jsx
-              </span>
-            </div>
-            <div className="h-60 w-full bg-neutral-50 dark:bg-neutral-800 rounded-2xl mt-4">
-              <img src={`${darkMode ? "/code-dark.png" : "/code-light.png"}`} alt="code image" className="h-full w-full"/>
+          <div className="bg-white dark:bg-neutral-900 flex-1 border border-neutral-200 dark:border-neutral-700 p-4 lg:p-5 xl:p-6 rounded-2xl w-full  ">
+            <div className="relative">
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-amber-500  to-indigo-900 opacity-50 blur-3xl rounded-2xl animate-pulse -z-10"></div>
+              {/* Dotes as windows control */}
+              <div className="flex items-center gap-2 relative">
+                <span className="w-2.5 h-2.5 lg:w-3 lg:h-3 bg-red-500 rounded-full"></span>
+                <span className="w-2.5 h-2.5 lg:w-3 lg:h-3 bg-green-500 rounded-full"></span>
+                <span className="w-2.5 h-2.5 lg:w-3 lg:h-3 bg-yellow-500 rounded-full"></span>
+                <span className="text-xs text-neutral-500 dark:text-neutral-400 absolute right-0 top-1/2 -translate-y-1/2">
+                  DarkMode.jsx
+                </span>
+              </div>
+              <div className="h-62 md:h-70 lg:h-76 w-full bg-neutral-50 dark:bg-neutral-800 rounded-2xl mt-4 relative ">
+                <img
+                  src={`${darkMode ? "/code-dark.png" : "/code-light.png"}`}
+                  alt="code image"
+                  className="h-full w-full object-cover object-left-top rounded-2xl"
+                />
+                {/* Animated brightness icon */}
+                <div className="absolute right-4 bottom-4">
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-r from-amber-500 to-indigo-900 text-white shadow-lg flex items-center justify-center animate-pulse">
+                    <i className="bx bx-brightness-half text-xl lg:text-2xl"></i>
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex relative space-y-2 mt-4 gap-4">
+                <div className="bg-neutral-200 dark:bg-neutral-950 dark:text-neutral-50 py-1 px-2 rounded-full text-xs">
+                  <i className="bx bxl-tailwind-css mr-1"></i>Tailwindcss v4.1
+                </div>
+                <div className="bg-neutral-200 dark:bg-blue-950 dark:text-neutral-50 py-1 px-2 rounded-full text-xs">
+                  <i className="bx bxl-react mr-1"></i>React
+                </div>
+                <div className=" absolute right-0 w-8 h-8 bg-amber-500 rounded-full flex items-center justify-center text-neutral-900">
+                  <i className="bx bx-copy"></i>
+                </div>
+              </div>
             </div>
           </div>
+        </div>
+        <div className="hidden md:block text-sm text-neutral-500 dark:text-neutral-400 bg-neutral-200 dark:bg-neutral-950 py-1 px-2 rounded-lg absolute right-[15%] top-12 animate-bounce border border-neutral-200 dark:border-neutral-700 ">
+          <i className="bx bx-check-circle mr-1"></i>
+          Accessible
+        </div>
+        <div className="hidden md:block text-sm text-neutral-500 dark:text-neutral-400 bg-neutral-200 dark:bg-neutral-950 py-1 px-2 rounded-lg absolute left-12 bottom-4 animate-bounce border border-neutral-200 dark:border-neutral-700 ">
+          <i className="bx bx-check-circle mr-1"></i>
+          Responsive
         </div>
       </div>
     </div>

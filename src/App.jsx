@@ -48,7 +48,7 @@ const App = () => {
           } text-neutral-950`}
         ></i>
       </button>
-      <Hero />
+      <Hero darkMode={darkMode} />
     </div>
   );
 };
